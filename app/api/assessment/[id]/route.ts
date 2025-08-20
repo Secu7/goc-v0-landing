@@ -1,12 +1,12 @@
-import { type NextRequest, NextResponse } from "next/server"
+import { NextRequest, NextResponse } from "next/server";
 
-// This would typically connect to your database
-// For now, we'll use the same in-memory storage reference
-const assessments: Map<string, > = new Map()
-
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
-  try {
-    const assessmentId = params.id
+export async function GET(
+  _req: NextRequest,
+  { params }: { params: { id: string } }
+) {
+  const { id } = params;
+  return NextResponse.json({ id });
+}
 
     if (!assessmentId) {
       return NextResponse.json({ error: "Assessment ID required" }, { status: 400 })
