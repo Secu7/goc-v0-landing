@@ -58,7 +58,7 @@ export function PDFReportGenerator({ assessmentData }: PDFReportGeneratorProps) 
     }
   }
 
-  const generateReportHTML = (reportData: any) => {
+  const generateReportHTML = (reportData: unknown) => {
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -264,7 +264,7 @@ export function PDFReportGenerator({ assessmentData }: PDFReportGeneratorProps) 
           <div class="section-title">Category Assessment</div>
           ${reportData.categoryResults
             .map(
-              (category: any) => `
+              (category: unknown) => `
             <div class="category">
               <div class="category-header">
                 <div class="category-title">${category.title}</div>
@@ -297,7 +297,7 @@ export function PDFReportGenerator({ assessmentData }: PDFReportGeneratorProps) 
           <div class="compliance-grid">
             ${Object.entries(reportData.complianceMapping)
               .map(
-                ([framework, status]: [string, any]) => `
+                ([framework, status]: [string, unknown]) => `
               <div class="compliance-item">
                 <div class="compliance-name">${framework}</div>
                 <div class="compliance-status ${status.includes("Likely") ? "compliant" : "gaps"}">${status}</div>
