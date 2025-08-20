@@ -200,7 +200,7 @@ export default function AssessmentPage() {
   const [showEmailForm, setShowEmailForm] = useState(false)
   const [showResults, setShowResults] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [assessmentId, setAssessmentId] = useState("")
+  //const [assessmentId, setAssessmentId] = useState("")
 
   const totalQuestions = assessmentData.reduce((total, category) => total + category.questions.length, 0)
   const answeredQuestions = Object.keys(answers).length
