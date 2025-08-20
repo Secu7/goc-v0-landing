@@ -51,7 +51,7 @@ export default function RootLayout({
             /* For Header Text & Gradient: Make primary a light color */
             --primary: #FAFAFA !important;
             /* For Gradient & Accents: Use new blue color */
-            --accent: #38bdf8 !important;
+            --accent: #1d4ed8 !important;
             /* For text on buttons that might use primary background */
             --primary-foreground: #FAFAFA !important;
           }
