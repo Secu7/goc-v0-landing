@@ -50,8 +50,8 @@ export default function RootLayout({
             /* --- Color Conflict Resolution --- */
             /* For Header Text & Gradient: Make primary a light color */
             --primary: #FAFAFA !important;
-            /* For Gradient: Make accent a visible light color */
-            --accent: #A1A1AA !important;
+            /* For Gradient & Accents: Use new blue color */
+            --accent: #38bdf8 !important;
             /* For text on buttons that might use primary background */
             --primary-foreground: #111111 !important;
           }
@@ -62,6 +62,11 @@ export default function RootLayout({
           /* For CTA Section: Force its background to be dark */
           .bg-primary {
             background-color: #000000 !important;
+          }
+          /* For Contact Sales button in CTA */
+          section.bg-primary button[variant="outline"] {
+            color: var(--foreground) !important;
+            border-color: var(--foreground) !important;
           }
         `}</style>
       </head>
