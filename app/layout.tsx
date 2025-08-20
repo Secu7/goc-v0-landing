@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ko" className={`${playfairDisplay.variable} ${sourceSansPro.variable}`}>
+    <html lang="ko" className={`dark ${playfairDisplay.variable} ${sourceSansPro.variable}`}>
       <body>{children}</body>
     </html>
   )
