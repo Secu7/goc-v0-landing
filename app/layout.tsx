@@ -53,7 +53,7 @@ export default function RootLayout({
             /* For Gradient & Accents: Use new blue color */
             --accent: #38bdf8 !important;
             /* For text on buttons that might use primary background */
-            --primary-foreground: #111111 !important;
+            --primary-foreground: #FAFAFA !important;
           }
           body {
             /* Improve readability */
