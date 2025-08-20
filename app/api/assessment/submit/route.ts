@@ -65,7 +65,7 @@ export async function GET(request: NextRequest) {
 
     // Find assessments for this email
     const userAssessments = Array.from(assessments.entries())
-      .filter(([_, data]) => data.email === email)
+      .filter(([, data]) => data.email === email)
       .map(([id, data]) => ({ id, ...data }))
 
     return NextResponse.json({
